@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <TemplateURL>https://raw.githubusercontent.com/merp4/unraid-docker-templates/master/templates/ms-sql-server-2019.xml</TemplateURL>
+  <Beta>False</Beta>
+  <Category>Tools: Other: Network:Other Network:Web</Category>
+  <Name>MC Server Forge</Name>
+  <Description>
+  </Description>
+  <Overview>
+  </Overview>
+  <Support></Support>
+  <Registry>https://registry.hub.docker.com/_/itzg/minecraft-server</Registry>
+  <GitHub></GitHub>
+  <Repository>itzg/minecraft-server:latest</Repository>
+  <Project></Project>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+  </Data>
+  <WebUI></WebUI>
+  <Icon>https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png</Icon>
+  <ExtraParams></ExtraParams>
+
+  <Config
+      Type="Port"
+      Name="Port"
+      Target="25565"
+      Default=""
+      Description=""
+      Mask="false"
+      Display="always"
+      Required="true">25565</Config>
+
+  <Config
+      Type="Variable"
+      Name="Accept EULA"
+      Target="EULA"
+      Default=""
+      Description=""
+      Mask="false"
+      Display="always"
+      Required="true">true</Config>
+	<Config
+      Type="Variable"
+      Name="FORGE_INSTALLER_URL"
+      Target="FORGE_INSTALLER_URL"
+      Default=""
+      Description=""
+      Mask="false"
+      Display="always"
+      Required="true"></Config>
+  <Config
+      Type="Variable"
+      Name="Forge"
+      Target="Type"
+      Default=""
+      Description=""
+      Mask="true"
+      Display="always"
+      Required="true">FORGE</Config>	  
+  <Config
+      Type="Variable"
+      Name="Version"
+      Target="VERSION"
+      Default=""
+      Description=""
+      Mask="false"
+      Display="always"
+      Required="true">1.16.5</Config>
+  <Config
+      Type="Variable"
+      Name="FORGEVERSION"
+      Target="FORGEVERSION"
+      Default=""
+      Description=""
+      Mask="false"
+      Display="always"
+      Required="true">1.16.5-36.1.16</Config>
+  
+  <Config
+      Type="Path"
+      Mode="rw"
+      Name="Data Path"
+      Target="/var/opt/mc/data"
+      Default="/mnt/cache/appdata/mc/data"
+      Description=""
+      Mask="false"
+      Display="always"
+      Required="true"></Config>
+
+</Containers>
