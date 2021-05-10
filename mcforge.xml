@@ -67,14 +67,14 @@
       Description=""
       Mask="false"
       Display="always"
-      Required="true"></Config>
+      Required="true">https://maven.minecraftforge.net/net/minecraftforge/forge/1.16.5-36.1.16/forge-1.16.5-36.1.16-installer.jar</Config>
   <Config
       Type="Variable"
       Name="Forge"
       Target="Type"
       Default=""
       Description=""
-      Mask="true"
+      Mask="false"
       Display="always"
       Required="true">FORGE</Config>	  
   <Config
